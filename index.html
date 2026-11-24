@@ -615,6 +615,159 @@
 @media(max-width:620px){.maple-ai-page{padding:16px 12px 96px}.mpa-panel{padding:14px}.mpa-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.mpa-kpis{gap:8px}.mpa-kpi{padding:11px;min-height:68px}.mpa-kpi b{font-size:16px}.mpa-brand{align-items:flex-start}.mpa-orb{width:48px;height:48px;border-radius:15px;font-size:22px}.mpa-canvas{height:245px}.mpa-nav button{flex:1;min-width:0}}
 
 </style>
+<style id="quantyx-responsive-buttons">
+/* QUANTYX AI — oynaning o'lchamiga moslashuvchi tugmalar */
+button,
+[role="button"] {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Bosh sahifadagi asosiy tugmalar: uchta teng ustun va bir xil o'lcham */
+.actions {
+  left: clamp(12px, 5vw, 100px);
+  right: clamp(12px, 5vw, 100px);
+  bottom: clamp(14px, 6.5vh, 86px);
+  width: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(8px, 1.5vw, 24px);
+  align-items: stretch;
+}
+.right-actions { display: contents; }
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: clamp(42px, 7vh, 64px);
+  padding: clamp(8px, 1.15vw, 16px);
+  font-size: clamp(12px, 1.15vw, 17px);
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Qaytish va sahifa navigatsiyasi tugmalari oynadan tashqariga chiqmaydi */
+.back-button,
+.modules-back,
+.matlab-nav button {
+  width: min(100%, clamp(170px, 26vw, 258px));
+  min-width: 0;
+  max-width: calc(100vw - 24px);
+  min-height: clamp(42px, 7vh, 64px);
+  padding: clamp(8px, 1.2vw, 14px) clamp(12px, 2vw, 24px);
+  font-size: clamp(13px, 1.35vw, 20px);
+  line-height: 1.2;
+  white-space: normal;
+}
+
+/* Turli modul navigatsiyalari kichik oynada keyingi qatorga o'tadi */
+.matlab-nav,
+.ai-nav,
+.mca-head-actions,
+.mca-nav,
+.mpa-head,
+.mpa-nav,
+.eng-actions,
+.eng-footer-nav,
+#mapleMathPage .maple-tools,
+#mapleMathPage .maple-nav,
+#maplePhysicsPage .maple-tools,
+#maplePhysicsPage .maple-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1vw, 14px);
+  min-width: 0;
+  max-width: 100%;
+}
+.matlab-nav button,
+.ai-nav button,
+.mca-head-actions button,
+.mca-nav button,
+.mpa-head button,
+.mpa-nav button,
+.eng-actions button,
+.eng-footer-nav button,
+#mapleMathPage .maple-tools button,
+#mapleMathPage .maple-nav button,
+#maplePhysicsPage .maple-tools button,
+#maplePhysicsPage .maple-nav button {
+  flex: 1 1 145px;
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+
+@media (max-width: 900px) {
+  .actions {
+    left: 16px;
+    right: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .nav-button {
+    min-height: clamp(42px, 6.5vh, 56px);
+    padding: 9px 10px;
+    font-size: clamp(12px, 1.8vw, 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  body { overflow: auto; }
+  .stage { height: 100svh; min-height: 100svh; }
+  .actions {
+    left: 12px;
+    right: 12px;
+    bottom: clamp(10px, 2.5vh, 18px);
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .nav-button {
+    min-height: clamp(38px, 6vh, 48px);
+    padding: 8px 10px;
+    font-size: clamp(11px, 3.2vw, 14px);
+  }
+  .back-button,
+  .modules-back,
+  .matlab-nav button {
+    width: min(100%, 230px);
+    min-height: 44px;
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+  .matlab-nav button,
+  .ai-nav button,
+  .mca-head-actions button,
+  .mca-nav button,
+  .mpa-head button,
+  .mpa-nav button,
+  .eng-actions button,
+  .eng-footer-nav button,
+  #mapleMathPage .maple-tools button,
+  #mapleMathPage .maple-nav button,
+  #maplePhysicsPage .maple-tools button,
+  #maplePhysicsPage .maple-nav button {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-height: 520px) and (min-width: 601px) {
+  .stage { min-height: 100dvh; }
+  .actions { bottom: clamp(8px, 2.5vh, 18px); gap: 8px; }
+  .nav-button { min-height: clamp(34px, 8vh, 46px); padding: 7px 10px; }
+  .back-button,
+  .modules-back,
+  .matlab-nav button { min-height: 40px; padding: 7px 12px; }
+}
+
+</style>
 </head>
 <body>
   <main class="stage" aria-label="QUANTYX AI Platform bosh sahifasi">
@@ -623,7 +776,6 @@
       <div class="right-actions">
         <button class="nav-button" type="button" data-section="Ma’ruzalar">MA'RUZALAR</button>
         <button class="nav-button" type="button" data-section="Amaliy mashg‘ulot">AMALIY MASHG'ULOT</button>
-        <button class="nav-button" type="button" data-section="Imtihon">IMTIHON</button>
       </div>
     </nav>
   </main>
